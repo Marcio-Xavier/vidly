@@ -16,12 +16,14 @@ class Form extends Component {
     }
     return errors;
   };
+
   validateProperty = ({ name, value }) => {
     const obj = { [name]: value };
     const schema = { [name]: this.schema[name] };
     const { error } = Joi.validate(obj, schema);
     return error ? error.details[0].message : null;
   };
+
   handleSubmit = e => {
     e.preventDefault();
 
@@ -31,6 +33,7 @@ class Form extends Component {
     if (errors) return;
     this.doSubmit();
   };
+
   handleChange = ({ currentTarget: input }) => {
     const errors = { ...this.state.errors };
     const errorMessage = this.validateProperty(input);
@@ -42,6 +45,7 @@ class Form extends Component {
 
     this.setState({ data, errors });
   };
+
   renderButton = label => {
     return (
       <button disabled={this.validate()} className="btn btn-primary">
@@ -49,6 +53,7 @@ class Form extends Component {
       </button>
     );
   };
+
   renderInput = (name, label, type = "text") => {
     const { data, errors } = this.state;
     return (
@@ -62,14 +67,15 @@ class Form extends Component {
       />
     );
   };
-  renderSelect = (name, label, type = "text") => {
+
+  renderSelect = (name, label, options) => {
     const { data, errors } = this.state;
     return (
       <Select
-        type={type}
         name={name}
         value={data[name]}
         label={label}
+        options={options}
         onChange={this.handleChange}
         error={errors[name]}
       />
