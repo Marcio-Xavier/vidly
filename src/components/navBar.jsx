@@ -5,6 +5,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand" to="/">
+        <i className="fa fa-film" aria-hidden="true" />
         Vidly
       </NavLink>
       <button
@@ -19,7 +20,7 @@ const NavBar = () => {
         <span className="navbar-toggler-icon" />
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
+        <div className="navbar-nav mr-auto">
           <NavLink className="nav-item nav-link" to="/movies">
             Movies
           </NavLink>
@@ -29,14 +30,14 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/rentals">
             Rentals
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/loginForm">
-            Login
-          </NavLink>
           <NavLink
             className="nav-item nav-link my-2 my-sm-0"
             to="/registerForm"
           >
             Register
+          </NavLink>
+          <NavLink className="nav-item nav-link text-right" to="/loginForm">
+            <i className="fa fa-sign-in" aria-hidden="true" /> Login
           </NavLink>
         </div>
       </div>
