@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import SelectLanguage from "./selectLanguage";
 
 const NavBar = () => {
   return (
@@ -36,9 +37,10 @@ const NavBar = () => {
           >
             Register
           </NavLink>
-          <NavLink className="nav-item nav-link text-right" to="/loginForm">
+          <NavLink className="nav-item nav-link mr-auto" to="/loginForm">
             <i className="fa fa-sign-in" aria-hidden="true" /> Login
           </NavLink>
+          <SelectLanguage className="d-flex justify-content-end" />
         </div>
       </div>
     </nav>
