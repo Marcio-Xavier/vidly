@@ -31,16 +31,15 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/rentals">
             Rentals
           </NavLink>
-          <NavLink
-            className="nav-item nav-link my-2 my-sm-0"
-            to="/registerForm"
-          >
+          <NavLink className="nav-item nav-link" to="/registerForm">
             Register
           </NavLink>
-          <NavLink className="nav-item nav-link mr-auto" to="/loginForm">
+          <NavLink className="nav-item nav-link" to="/loginForm">
             <i className="fa fa-sign-in" aria-hidden="true" /> Login
           </NavLink>
-          <SelectLanguage className="d-flex justify-content-end" />
+          <div className="align-right">
+            <SelectLanguage />
+          </div>
         </div>
       </div>
     </nav>

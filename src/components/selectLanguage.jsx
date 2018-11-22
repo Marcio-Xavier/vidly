@@ -12,11 +12,11 @@ class SelectLanguage extends Component {
             autocomplete="off"
             checked
           />
-          PT-BR
+          EN-US
         </label>
         <label className="btn btn-info btn-sm">
           <input type="radio" name="options" id="option2" autocomplete="off" />
-          EN-US
+          PT-BR
         </label>
       </div>
     );

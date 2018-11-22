@@ -9,3 +9,7 @@ body {
 .clickable {
   cursor: pointer;
 }
+.align-right {
+  position: absolute;
+  right: 10px;
+}
