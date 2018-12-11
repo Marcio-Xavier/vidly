@@ -5,17 +5,11 @@ class SelectLanguage extends Component {
     return (
       <div className="btn-group btn-group-toggle" data-toggle="buttons">
         <label className="btn btn-info btn-sm active">
-          <input
-            type="radio"
-            name="options"
-            id="option1"
-            autocomplete="off"
-            checked
-          />
+          <input type="radio" name="options" id="option1" autoComplete="off" />
           EN-US
         </label>
         <label className="btn btn-info btn-sm">
-          <input type="radio" name="options" id="option2" autocomplete="off" />
+          <input type="radio" name="options" id="option2" autoComplete="off" />
           PT-BR
         </label>
       </div>

@@ -37,6 +37,7 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/loginForm">
             <i className="fa fa-sign-in" aria-hidden="true" /> Login
           </NavLink>
+
           <div className="align-right">
             <SelectLanguage />
           </div>
