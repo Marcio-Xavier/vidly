@@ -9,7 +9,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "popper.js/dist/popper.js";
 import "jquery/dist/jquery.min.js";
 import "font-awesome/css/font-awesome.css";
-
+console.log(process.env);
 ReactDOM.render(
   <BrowserRouter>
     <App />

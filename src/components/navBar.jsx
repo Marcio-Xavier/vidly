@@ -2,12 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import SelectLanguage from "./selectLanguage";
 
-const NavBar = () => {
+const NavBar = ({ user }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand" to="/">
-        <i className="fa fa-film" aria-hidden="true" />
-        Vidly
+        <i className="fa fa-film" aria-hidden="true" /> Vidly
       </NavLink>
       <button
         className="navbar-toggler"
@@ -31,12 +30,26 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/rentals">
             Rentals
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/registerForm">
-            Register
-          </NavLink>
-          <NavLink className="nav-item nav-link" to="/loginForm">
-            <i className="fa fa-sign-in" aria-hidden="true" /> Login
-          </NavLink>
+          {!user && (
+            <React.Fragment>
+              <NavLink className="nav-item nav-link" to="/registerForm">
+                Register
+              </NavLink>
+              <NavLink className="nav-item nav-link" to="/loginForm">
+                <i className="fa fa-sign-in" aria-hidden="true" /> Login
+              </NavLink>
+            </React.Fragment>
+          )}
+          {user && (
+            <React.Fragment>
+              <NavLink className="nav-item nav-link" to="/">
+                {user.name}
+              </NavLink>
+              <NavLink className="nav-item nav-link" to="/logout">
+                <i className="fa fa-sign-in" aria-hidden="true" /> Logout
+              </NavLink>
+            </React.Fragment>
+          )}
 
           <div className="align-right">
             <SelectLanguage />
